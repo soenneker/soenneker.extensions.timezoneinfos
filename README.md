@@ -4,10 +4,23 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.timezoneinfos/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.timezoneinfos/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.TimeZoneInfos
-### A collection of helpful TimeZoneInfo extension methods
+A collection of helpful TimeZoneInfo extension methods.
 
 ## Installation
 
-```
+```bash
 dotnet add package Soenneker.Extensions.TimeZoneInfos
 ```
+
+## Quick start
+
+```csharp
+using Soenneker.Extensions.TimeZoneInfos;
+
+// Given an existing System.TimeZoneInfo named timeZone:
+var result = timeZone.ToSimpleAbbreviation();
+```
+
+## Common operations
+
+- `ToSimpleAbbreviation()` - Converts a TimeZoneInfo to its corresponding simple abbreviation. Returns the abbreviation (e.g., "ET", "CT", "MT", "PT"), or "Unknown" if the time zone is not recognized.
